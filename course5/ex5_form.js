@@ -14,15 +14,15 @@ form.addEventListener('submit', function(event) {
     console.log('password: ' + password);
 
     if (!name) {
-        alert('名前を入力してください。無礼てんのか');
+        alert('名前を入力してください');
         return;
     }
     if (!email) {
-        alert('メアドを入力してください。無礼てんのか');
+        alert('メアドを入力してください');
         return;
     }
     if (!password) {
-        alert('パスワードを入力してください。無礼てんのか');
+        alert('パスワードを入力してください');
         return;
     }
     form.submit();
