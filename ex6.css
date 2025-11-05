@@ -1,0 +1,25 @@
+body {
+    background-color: #d5d5d5;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 64px;
+    text-align-last: center;
+    -webkit-text-stroke:1px #6ce8e6;
+}
+
+div {
+    color: #20b8b5;
+}
+
+.name {
+    font-family: 'Roboto';
+    font-size: 32px;
+}
+
+.string {
+    font-family: 'Noto Sans JP';
+    font-size: 18px;
+}
