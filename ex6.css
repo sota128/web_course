@@ -5,9 +5,9 @@ body {
 h1 {
     color: #ffffff;
     font-family: 'Roboto';
-    font-size: 112px;
+    font-size: 96px;
     text-align-last: center;
-    -webkit-text-stroke:1px #6ee1cc;
+    -webkit-text-stroke:1px #80f1dd;
 }
 
 div {
