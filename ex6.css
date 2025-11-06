@@ -1,13 +1,13 @@
 body {
-    background-color: #d5d5d5;
+    background-color: #90fae7;
 }
 
 h1 {
     color: #ffffff;
     font-family: 'Roboto';
-    font-size: 64px;
+    font-size: 112px;
     text-align-last: center;
-    -webkit-text-stroke:1px #6ce8e6;
+    -webkit-text-stroke:1px #6ee1cc;
 }
 
 div {
