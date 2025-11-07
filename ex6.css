@@ -6,6 +6,7 @@
 }
 
 body {
+    color: #20b8b5;
     background-color: #90fae7;
 }
 
@@ -17,13 +18,10 @@ h1 {
     -webkit-text-stroke: 1px #80f1dd;
 }
 
-div {
-    color: #20b8b5;
-}
-
-h2,
-p {
-    display: inline;
+h2, p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
 }
 
 .tag {
@@ -33,5 +31,5 @@ p {
 
 .content {
     font-family: 'Source Han Sans';
-    font-size: 64px;
+    font-size: 48px;
 }
