@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'SourceHanSansJP';
+    src: url('SourceHanSansJP-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
     background-color: #90fae7;
 }
@@ -7,19 +14,24 @@ h1 {
     font-family: 'Roboto';
     font-size: 96px;
     text-align-last: center;
-    -webkit-text-stroke:1px #80f1dd;
+    -webkit-text-stroke: 1px #80f1dd;
 }
 
 div {
     color: #20b8b5;
 }
 
-.name {
+h2,
+p {
+    display: inline;
+}
+
+.tag {
     font-family: 'Roboto';
     font-size: 32px;
 }
 
-.string {
-    font-family: 'Noto Sans JP';
-    font-size: 18px;
+.content {
+    font-family: 'Source Han Sans';
+    font-size: 64px;
 }
