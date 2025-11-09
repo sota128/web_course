@@ -1,9 +1,6 @@
-@font-face {
-    font-family: 'SourceHanSansJP';
-    src: url('SourceHanSansJP-Regular.otf') format('opentype');
-    font-style: normal;
-    font-weight: normal;
-}
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap');
 
 body {
     color: #20b8b5;
@@ -11,25 +8,31 @@ body {
 }
 
 h1 {
-    color: #ffffff;
-    font-family: 'Roboto';
+    /* font */
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     font-size: 96px;
-    text-align-last: center;
-    -webkit-text-stroke: 1px #80f1dd;
-}
 
-h2, p {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0;
+    /* text */
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 5px #80f1dd, 0 0 5px #80f1dd;
 }
 
 .tag {
     font-family: 'Roboto';
     font-size: 32px;
+
+    text-align: left;
+    margin-left: 64px;
 }
 
 .content {
-    font-family: 'Source Han Sans';
+    /*font-family: 'ヒラギノ明朝 Pro W3', '游明朝', 'MS Mincho', serif;*/
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 48px;
 }
