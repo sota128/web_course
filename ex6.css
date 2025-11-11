@@ -5,7 +5,7 @@
 body {
     color: #19adab;
     background-color: #90fae7;
-    margin: 64px;
+    margin-left: 64px;
 }
 
 h1 {
@@ -22,7 +22,11 @@ h1 {
     text-shadow: 0 0 5px #80f1dd, 0 0 5px #80f1dd;
 
     /* layout */
-    margin-bottom: 10px;
+    height: 32px;
+}
+
+ul {
+    list-style-type: square;
 }
 
 .font-eng {
@@ -37,15 +41,27 @@ h1 {
     font-size: 48px;
 }
 
-.inline-group {
+.inline {
     display: flex;
     align-items: center;
 }
 
-.inline-group h2 {
+.inline h2 {
     margin-right: 24px;
 }
 
-.inline-group .adjust-position {
+.inline .adjust-position {
     margin-bottom: 8px;
+}
+
+.inline-list {
+    display: flex;
+}
+
+.inline-list h2 {
+    margin-right: 24px;
+}
+
+.inline-list .adjust-position {
+    margin-top: 8px;
 }
