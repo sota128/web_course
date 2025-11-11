@@ -20,16 +20,16 @@ h1 {
     text-align: center;
     color: #ffffff;
     text-shadow: 0 0 5px #80f1dd, 0 0 5px #80f1dd;
+
+    /* layout */
 }
 
-.tag {
-    font-family: 'Roboto';
+.font-eng {
+    font-family: "Roboto";
     font-size: 32px;
-
-    text-align: left;
 }
 
-.content {
+.font-content {
     font-family: "Kiwi Maru", serif;
     font-weight: 400;
     font-style: normal;
@@ -42,6 +42,9 @@ h1 {
 }
 
 .inline-group h2 {
-    margin-right: 16px;
+    margin-right: 24px;
+}
+
+.inline-group .adjust-position {
     margin-bottom: 8px;
 }
