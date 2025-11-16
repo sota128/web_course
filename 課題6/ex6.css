@@ -5,7 +5,7 @@
 body {
     color: #19adab;
     background-color: #90fae7;
-    margin-left: 64px;
+    margin-left: 32px;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 96px;
+    font-size: 72px;
 
     /* text */
     text-align: center;
