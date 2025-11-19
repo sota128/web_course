@@ -5,16 +5,20 @@
 body {
     color: #19adab;
     background-color: #90fae7;
-    margin-left: 32px;
+    margin: 0;
+    padding: 0 32px;
+    font-family: "Kiwi Maru", serif; /* ページ全体の基本フォントを指定 */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;  /* 中央寄せ */
 }
 
 h1 {
     /* font */
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 64px;
+    font-size: 72px;
 
     /* text */
     text-align: center;
@@ -22,42 +26,74 @@ h1 {
     text-shadow: 0 0 5px #80f1dd, 0 0 5px #80f1dd;
 
     /* layout */
-    height: 32px;
+    padding: 20px 0;
+    margin-bottom: 24px;
 }
 
-.font-eng {
-    font-family: "Roboto";
+h2 {
+    font-family: "Roboto", sans-serif;
     font-size: 32px;
+    border-bottom: 3px solid #19adab;  /* 下線 */
+    padding-bottom: 8px;
 }
 
-.font-content {
-    font-family: "Kiwi Maru", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 48px;
+.section {
+    margin-bottom: 48px;
 }
 
-.inline {
-    display: flex;
-    align-items: center;
+ul {
+    list-style-type: square;
+    font-size: 28px;
+    padding-left: 30px;
 }
 
-.inline h2 {
-    margin-right: 24px;
+ul li {
+    margin-bottom: 16px;
 }
 
-.inline .adjust-position {
-    margin-bottom: 8px;
+ol {
+    list-style-type: decimal;
+    font-size: 22px;
+    margin-top: 12px;
+    padding-left: 40px;
 }
 
-.inline-list {
-    display: flex;
+table {
+    width: 100%;
+    border-collapse: collapse;  /* 枠線対応 */
+    font-size: 18px;
+    background-color: #f0fffd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.inline-list h2 {
-    margin-right: 24px;
+th, td {
+    border: 2px solid #19adab;
+    padding: 12px 16px;
+    text-align: left;
 }
 
-.inline-list .adjust-position {
-    margin-top: 8px;
+th {
+    background-color: #19adab;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+td:first-child {
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+}
+
+/* 汎用インラインタグ用のスタイル */
+.highlight {
+    /* h2の見出し内で使用 */
+    color: #00796b;
+}
+
+.highlight-text {
+    /* 表の理由内で使用 */
+    font-weight: bold;
+    color: #d84315;
+    background: linear-gradient(transparent 70%, #90fae7 70%);  /* ハイライトライン */
 }
