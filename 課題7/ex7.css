@@ -7,7 +7,7 @@ body {
     background-color: #90fae7;
     margin: 0;
     padding: 0 32px;
-    font-family: "Kiwi Maru", serif; /* ページ全体の基本フォントを指定 */
+    font-family: "Kiwi Maru", serif;
 }
 
 .container {
@@ -87,12 +87,10 @@ td:first-child {
 
 /* 汎用インラインタグ用のスタイル */
 .highlight {
-    /* h2の見出し内で使用 */
     color: #00796b;
 }
 
 .highlight-text {
-    /* 表の理由内で使用 */
     font-weight: bold;
     color: #d84315;
     background: linear-gradient(transparent 70%, #90fae7 70%);  /* ハイライトライン */
