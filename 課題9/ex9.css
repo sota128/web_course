@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+/* 全体の基本スタイル */
+body {
+    background-color: #eaf4ff; /* 少し青みがかった背景色 */
+    font-family: Arial, Meiryo, sans-serif;
+    color: #3a3a3a;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px; /* 全体の最大幅を指定 */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 30px 20px;
+}
+
+h1 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 5rem;
+    font-weight: 600;
+    font-style: normal;
+
+    text-align: center;
+    color: #2c7c9a;
+
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #2c7c9a;
+    border-bottom: 2px solid #bce0ee;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* フレックスボックスの全体スタイル */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* 子要素の折り返しを許可（これが無いと強制横並び） */
+    gap: 30px; /* 要素間の隙間を設定 */
+}
+
+/* 上段の2つのセクションのスタイル */
+.profile-card, .hobby-card {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 40%;  /* 横幅40%で横並び */
+
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box; /* paddingを含めた幅計算にする */
+}
+
+/* 下段のセクションのスタイル */
+.skill-card {
+    /* flex-basisを100%にする -> 一行を占有 */
+    flex: 1 1 100%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+li {
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* マーカーアイコン */
+li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #2c7c9a;
+    font-size: 12px;
+}

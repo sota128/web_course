@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【EX10】テーマ切り替え</title>
+    <link rel="stylesheet" href="ex10.css">
+    <!-- Google Fontsからドット絵風フォントを読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<!-- 初期テーマとして 'theme-overworld' を設定 -->
+
+<body class="theme-overworld">
+
+    <div class="container">
+        <header>
+            <h1>My Profile</h1>
+            <!-- テーマ切り替えボタン -->
+            <nav class="theme-switcher">
+                <button id="btn-overworld">オーバーワールド</button>
+                <button id="btn-nether">ネザー</button>
+                <button id="btn-end">ジ・エンド</button>
+            </nav>
+        </header>
+
+        <div class="flex-container">
+            <!-- プロフィール -->
+            <section class="card">
+                <h2>プロフィール</h2>
+                <p>名前: スティーブ（仮）</p>
+                <p>好きなこと: 建築と探検</p>
+                <p>目標: エンチャントテーブルを完成させる</p>
+            </section>
+
+            <!-- 趣味 -->
+            <section class="card">
+                <h2>集めているもの</h2>
+                <ul>
+                    <li>ダイヤモンド</li>
+                    <li>鉄インゴット</li>
+                    <li>丸石（大量）</li>
+                </ul>
+            </section>
+
+            <!-- スキル -->
+            <section class="card">
+                <h2>得意なこと</h2>
+                <p>整地とブランチマイニング。敵から逃げるのも得意です。</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScriptファイルを読み込み -->
+    <script src="ex10.js"></script>
+</body>
+
+</html>

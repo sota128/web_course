@@ -10,7 +10,7 @@ body {
     font-family: "Kiwi Maru", serif;
 }
 
-/* --- 共通ナビゲーションバー --- */
+/* --- ナビゲーションバー --- */
 nav {
     background-color: #19adab;
     padding: 10px 0;
@@ -41,8 +41,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* 表示中のページのリンクを分かりやすくするスタイル */
 nav ul li a.active {
+    /* 表示中のページのリンクに下線 */
     border-bottom: 3px solid #ffffff;
 }
 
@@ -98,11 +98,32 @@ h2 {
 }
 
 .home-content a {
-    color: #d84315;
+    color: #0000EE;
     font-weight: bold;
 }
 
 /* --- プロフィールページ用のスタイル --- */
+.profile-content p {
+    font-size: 28px;
+}
+
+.profile-content ul {
+    list-style-type: square;
+    font-size: 28px;
+    padding-left: 30px;
+}
+
+.profile-content ul li {
+    margin-bottom: 16px;
+}
+
+.profile-content ol {
+    list-style-type: decimal;
+    font-size: 22px;
+    margin-top: 12px;
+    padding-left: 40px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

@@ -1,0 +1,122 @@
+/* --- 共通スタイル --- */
+body {
+    font-family: 'DotGothic16', sans-serif; /* マイクラ風フォント */
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s; /* テーマ変更時のアニメーション */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.theme-switcher {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+button {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 3px solid;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 100%; /* 基本は1列 */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+/* 画面幅が広い場合は2列にする */
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 45%;
+    }
+}
+
+
+/* --- テーマ別スタイル --- */
+
+/* 1. オーバーワールド テーマ (草ブロック風) */
+.theme-overworld {
+    background-color: #87CEEB; /* 空の色 */
+    color: #333;
+}
+.theme-overworld h1, .theme-overworld h2 {
+    color: #2E8B57; /* 深い緑 */
+}
+.theme-overworld .card {
+    background-color: #F5DEB3; /* 土ブロック風 */
+    border: 5px solid #A0522D; /* 濃い茶色の枠線 */
+}
+.theme-overworld button {
+    border-color: #2E8B57;
+    color: #2E8B57;
+}
+.theme-overworld button:hover {
+    background-color: #2E8B57;
+    color: #fff;
+}
+
+
+/* 2. ネザー テーマ (ネザーラック風) */
+.theme-nether {
+    background-color: #4d1212; /* 暗い赤 */
+    color: #FFDEAD; /* 明るいオレンジ */
+}
+.theme-nether h1, .theme-nether h2 {
+    color: #FF4500; /* オレンジレッド */
+}
+.theme-nether .card {
+    background-color: #8B0000; /* 暗い赤の背景 */
+    border: 5px solid #4d0000; /* さらに暗い赤の枠線 */
+}
+.theme-nether button {
+    border-color: #FF4500;
+    color: #FF4500;
+}
+.theme-nether button:hover {
+    background-color: #FF4500;
+    color: #fff;
+}
+
+
+/* 3. ジ・エンド テーマ (エンドストーン風) */
+.theme-end {
+    background-color: #1a1a1a; /* 暗い背景 */
+    color: #FFFACD; /* 明るい黄色 */
+}
+.theme-end h1, .theme-end h2 {
+    color: #DA70D6; /* 紫色 */
+}
+.theme-end .card {
+    background-color: #483D8B; /* 暗いスレートブルー */
+    border: 5px solid #8A2BE2; /* 青紫の枠線 */
+}
+.theme-end button {
+    border-color: #DA70D6;
+    color: #DA70D6;
+}
+.theme-end button:hover {
+    background-color: #DA70D6;
+    color: #fff;
+}
