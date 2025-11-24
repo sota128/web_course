@@ -4,28 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介ページ - テーマ切り替え</title>
+    <title>自己紹介ページ（テーマ切替）</title>
+
     <link rel="stylesheet" href="ex10.css">
+    <script src="theme.js" defer></script>
 </head>
 
-<body>
-
-    <!-- テーマ切り替えボタンのセクションを追加 -->
-    <div class="theme-switcher">
-        <button id="theme-default">デフォルト</button>
-        <button id="theme-modern-light">モダンライト</button>
-        <button id="theme-cyber-dark">サイバーダーク</button>
-        <button id="theme-retro-game">レトロゲーム</button>
-    </div>
+<body class="theme-seabreeze">  <!-- 初期テーマはシーブリーズ -->
 
     <div class="container">
         <h1>My Profile & Skills</h1>
 
-        <!-- Flexboxを適用する親要素 -->
+        <!-- テーマ切替ボタン -->
+        <div class="theme-buttons">
+            <!-- 各ボタンは押されたらbodyに対応クラスを付与 -->
+            <button id="btn-seabreeze" class="theme-btn active" aria-pressed="true">シーブリーズ</button>
+            <button id="btn-midnight" class="theme-btn" aria-pressed="false">ミッドナイト</button>
+            <button id="btn-sumpop" class="theme-btn" aria-pressed="false">サマーポップ</button>
+        </div>
+
+        <!-- Flexbox を適用する親要素 -->
         <div class="flex-container">
 
             <!-- 子要素1: プロフィール -->
-            <section class="profile-card">
+            <section class="profile-card card">
                 <h2>プロフィール</h2>
                 <p><strong>名前:</strong> 山内颯大</p>
                 <p><strong>出身地:</strong> 北海道苫小牧市</p>
@@ -34,7 +36,7 @@
             </section>
 
             <!-- 子要素2: 趣味 -->
-            <section class="hobby-card">
+            <section class="hobby-card card">
                 <h2>趣味</h2>
                 <ul>
                     <li>ピアノを弾くこと</li>
@@ -45,17 +47,14 @@
             </section>
 
             <!-- 子要素3: スキル -->
-            <section class="skill-card">
+            <section class="skill-card card">
                 <h2>スキル</h2>
-                <p>C/C++, C#, Python, java, HTML, CSS,
-                    JavaScriptを基礎から学んでいます。最近はライブラリ開発に手を出したり引っ込めたり...。今はC#とC++に熱中しているところです</p>
+                <p>C/C++, C#, Python, Java, HTML, CSS, JavaScript を基礎から学んでいます。最近は
+                    ライブラリ開発に手を出したり引っ込めたり...。今は C# と C++ に熱中しているところです。</p>
             </section>
+
         </div>
     </div>
-
-    <!-- JavaScriptファイルを読み込む -->
-    <script src="theme.js"></script>
-
 </body>
 
 </html>

@@ -1,19 +1,18 @@
-/* --- Google Fontsのインポート --- */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* --- デフォルトの基本スタイル --- */
+/* --- 基本レイアウト --- */
 body {
-    background-color: #eaf4ff;
+    /* 下地（各テーマで上書き） */
+    margin: 0;
+    padding: 0;
     font-family: Arial, Meiryo, sans-serif;
     color: #3a3a3a;
-    margin: 0;
-    padding: 80px 0 0 0; /* ボタンのための上部余白 */
-    transition: background-color 0.5s, color 0.5s; /* テーマ変更時のアニメーション */
+    background-color: #eaf4ff;
 }
 
 .container {
+    /* ページの中央に寄せる */
     max-width: 960px;
     margin: 0 auto;
     padding: 30px 20px;
@@ -21,42 +20,64 @@ body {
 
 h1 {
     font-family: "Caveat", cursive;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 600;
     text-align: center;
-    color: #2c7c9a;
-    margin-bottom: 50px;
-    transition: color 0.5s, text-shadow 0.5s;
+    color: #2c7c9a;  /* 一応シーブリーズに合わせる */
+    margin-bottom: 24px;
 }
 
-h2 {
-    color: #2c7c9a;
-    border-bottom: 2px solid #bce0ee;
-    padding-bottom: 8px;
-    margin-top: 0;
-    transition: color 0.5s, border-bottom-color 0.5s;
+/* --- テーマ切替ボタン --- */
+.theme-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
+.theme-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* .active -> 強調表示 */
+.theme-btn.active {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);  /* 影で選択中を強調 */
+    transform: translateY(-2px);  /* 軽い持ち上げ効果（装飾） */
+}
+
+/* --- フレックスボックス --- */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.profile-card, .hobby-card, .skill-card {
-    flex: 1 1 40%;
+/* --- セクションカード --- */
+.card {
     background-color: #ffffff;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
-    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s, transform 0.3s ease;
 }
 
+/* 上段の2つのセクション */
+.profile-card,
+.hobby-card {
+    flex: 1 1 40%;
+}
+
+/* 下段のセクション */
 .skill-card {
     flex: 1 1 100%;
 }
 
+/* --- ul li --- */
 ul {
     padding-left: 20px;
     list-style-type: none;
@@ -64,156 +85,101 @@ ul {
 
 li {
     line-height: 1.8;
-    position: relative;
-    padding-left: 20px;
+    position: relative;  /* ::beforeの位置をli基準に設定 */
+    padding-left: 24px;
 }
 
 li::before {
     content: '▶';
     position: absolute;
     left: 0;
-    color: #2c7c9a;
+    top: 0.25em;
     font-size: 12px;
-    transition: color 0.5s;
-}
-
-/* --- テーマ切り替えボタンのスタイル --- */
-.theme-switcher {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    text-align: center;
-    padding: 10px 0;
-    z-index: 100;
-    border-bottom: 1px solid #ddd;
-}
-
-.theme-switcher button {
-    margin: 0 10px;
-    padding: 8px 16px;
-    border: 1px solid #2c7c9a;
-    background-color: #fff;
     color: #2c7c9a;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.theme-switcher button:hover {
-    background-color: #2c7c9a;
-    color: #fff;
+/* 小さめ画面でのレスポンシブ */
+@media (max-width: 720px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .profile-card,
+    .hobby-card {
+        flex: 1 1 100%;
+    }
 }
 
+/* --- テーマ --- */
+/* 1. シーブリーズ */
+body.theme-seabreeze {
+    background-color: #eaf4ff;
+    color: #2f3b3f;
+}
 
-/* --- テーマ1: モダンライト --- */
-body.theme-modern-light {
-    background-color: #f4f7f6;
-    color: #333;
+body.theme-seabreeze h1 {
+    color: #2c7c9a;
 }
-.theme-modern-light h1 {
-    background: linear-gradient(45deg, #2c7c9a, #6db3c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.theme-modern-light h2 {
-    color: #333;
-    border-bottom-color: #6db3c8;
-}
-.theme-modern-light .profile-card,
-.theme-modern-light .hobby-card,
-.theme-modern-light .skill-card {
+
+body.theme-seabreeze .card {
     background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-.theme-modern-light .profile-card:hover,
-.theme-modern-light .hobby-card:hover,
-.theme-modern-light .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-.theme-modern-light li::before {
-    content: '✔';
-    color: #6db3c8;
 }
 
-/* --- テーマ2: サイバーダーク --- */
-body.theme-cyber-dark {
-    background-color: #0d1117;
-    color: #c9d1d9;
-    font-family: 'Share Tech Mono', monospace;
-}
-.theme-cyber-dark h1 {
-    font-family: "Caveat", cursive;
-    color: #58a6ff;
-    text-shadow: 0 0 5px #58a6ff, 0 0 10px rgba(88, 166, 255, 0.5);
-    background: none; /* グラデーションをリセット */
-    -webkit-text-fill-color: unset;
-}
-.theme-cyber-dark h2 {
-    color: #58a6ff;
-    border-bottom-color: #30363d;
-}
-.theme-cyber-dark .profile-card,
-.theme-cyber-dark .hobby-card,
-.theme-cyber-dark .skill-card {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    box-shadow: 0 0 15px rgba(88, 166, 255, 0.1);
-}
-.theme-cyber-dark li::before {
-    content: '>';
-    color: #58a6ff;
-    font-weight: bold;
+body.theme-seabreeze li::before {
+    color: #2c7c9a;
 }
 
-/* --- テーマ3: レトロゲーム --- */
-body.theme-retro-game {
-    background-color: #2F4858;
-    color: #FFF;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
-    image-rendering: pixelated;
+body.theme-seabreeze .theme-btn {
+    background-color: rgba(255, 255, 255, 0.95);
 }
-.theme-retro-game h1 {
-    font-size: 2.5rem;
-    color: #FFD700;
-    text-shadow: 4px 4px 0 #000;
-    background: none; /* グラデーションをリセット */
-    -webkit-text-fill-color: unset;
+
+/* 2. ミッドナイト */
+body.theme-midnight {
+    background-color: #0e1220;
+    color: #e6eef6;
 }
-.theme-retro-game h2 {
-    background-color: #000;
-    color: #FFF;
-    border: none;
-    padding: 10px;
-    margin-bottom: 20px;
+
+body.theme-midnight h1 {
+    color: #9ad3ff;
 }
-.theme-retro-game .profile-card,
-.theme-retro-game .hobby-card,
-.theme-retro-game .skill-card {
-    background-color: #3E5C76;
-    border: 4px solid #FFF;
-    border-radius: 0;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
-    color: #FFF;
+
+body.theme-midnight .card {
+    background-color: #151824;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
-.theme-retro-game ul {
-    padding-left: 0;
+
+body.theme-midnight li::before {
+    color: #9ad3ff;
 }
-.theme-retro-game li {
-    line-height: 2;
-    padding-left: 25px;
+
+body.theme-midnight .theme-btn {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #e6eef6;
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
-.theme-retro-game li::before {
-    content: '';
-    top: 12px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 12px solid #FFD700;
+
+/* 3. サマーポップ */
+body.theme-sumpop {
+    background: linear-gradient(135deg, #fffbe6 0%, #ffe6f0 50%, #e6f7ff 100%);
+    color: #2b2b2b;
+}
+
+body.theme-sumpop h1 {
+    color: #ff6b6b;
+}
+
+body.theme-sumpop .card {
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 99, 130, 0.08);
+    border: 1px solid rgba(255, 107, 107, 0.06);
+}
+
+body.theme-sumpop li::before {
+    color: #ff6b6b;
+}
+
+body.theme-sumpop .theme-btn {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
