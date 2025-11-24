@@ -25,5 +25,9 @@ form.addEventListener('submit', function(event) {
         alert('パスワードを入力してください');
         return;
     }
+    if (password.length <= 12) {
+        alert('パスワードは13文字以上で入力してください');
+        return;
+    }
     form.submit();
 });
