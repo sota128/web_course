@@ -14,15 +14,13 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    font-variation-settings: "wdth" 100;
     font-size: 72px;
 
     /* text */
     text-align: center;
     color: #ffffff;
     text-shadow: 0 0 5px #80f1dd, 0 0 5px #80f1dd;
-
-    /* layout */
-    height: 32px;
 }
 
 ul {
