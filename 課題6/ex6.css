@@ -54,3 +54,8 @@ ul {
 .inline .en-ja {
     margin-bottom: 8px;
 }
+
+.right-align {
+    justify-content: flex-end;
+    margin-right: 24px;
+}
